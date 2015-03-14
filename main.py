@@ -1,10 +1,13 @@
-from utils import initCam
+#!/usr/bin/env python
+from utils import initCam, findKbd
 import cv2
 from time import time
 import sys
 
 def main():
 	cam = initCam()
+
+	touchMap = findKbd(cam)
 
 	frames = 0
 	startTime = time()
